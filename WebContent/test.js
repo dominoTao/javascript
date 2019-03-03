@@ -10,3 +10,30 @@ function doSomething() {
 	alert(123);
 }
 //$(document).ready();
+function imageSwap(imgName, url) {
+	if(document.images) {
+		document.images[imgName].src = url;
+	}
+}
+function myFunc(elemID) {
+	var obj;
+	if(document.getElementById){
+		obj = document.getElementById(elemID);
+	}else if(document.all){
+		obj = document.all(elemID);
+	}else if(document.layers) {
+		obj = document.layers[elemID];
+	}
+	if(obj) {
+		//asdfasdf
+	}
+	if(document.body && document.body.style) {//会存在短路情况
+		//staements that work on the body's style property
+	}
+	//等价于
+	if(document.body) {
+		if(document.body.style) {
+			//staements that work on the body's style property
+		}
+	}
+}
