@@ -25,20 +25,20 @@ function myFunc(elemID) {
 		obj = document.layers[elemID];
 	}
 	if(obj) {
-		//asdfasdf
+		//statements that work on the body's style property
 	}
 	if(document.body && document.body.style) {//会存在短路情况
-		//staements that work on the body's style property
+		//statements that work on the body's style property
 	}
 	//等价于
 	if(document.body) {
 		if(document.body.style) {
-			//staements that work on the body's style property
+			//statements that work on the body's style property
 		}
 	}
 	//typeof 操作符用于测试特性是否有效
 	if (document.body && typeof document.body.scroll != "undefined") {
-		//staements that work on the body's scroll property
+		//statements that work on the body's scroll property
 		new String("Hello");
 	}
 }
